@@ -1,0 +1,4 @@
+function downloadApp(appName) {
+    alert("سيتم تحميل التطبيق: " + appName);
+    window.location.href = appName;
+}
