@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hussein-engineering-portfolio.vercel.app/sitemap.xml
