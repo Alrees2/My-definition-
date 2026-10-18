@@ -1,12 +1,170 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرحبًا في GitHub Pages</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080e1c">
+  <meta name="description" content="Hussein Ali Mustafa — software-focused engineer building web, mobile and cloud-backed products. Explore selected projects and engineering expertise.">
+  <meta property="og:title" content="Hussein Ali Mustafa | Software Engineer">
+  <meta property="og:description" content="Engineering digital experiences — web, mobile, data and cloud.">
+  <meta property="og:type" content="website">
+  <title>Hussein Ali Mustafa | Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23080e1c'/%3E%3Cpath d='M15 20v25M15 32h24M39 20v25' stroke='%2348d9e6' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#080e1c;--surface:#101a2c;--surface2:#121f35;--text:#edf5ff;--muted:#9aabc6;--line:rgba(154,183,220,.16);--aqua:#50e2e7;--violet:#a59cff;--shadow:0 22px 78px rgba(0,0,0,.32);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;min-width:320px;font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+body[dir=rtl]{font-family:Tajawal,sans-serif}body:before{content:"";position:fixed;z-index:-2;inset:0;background:radial-gradient(ellipse 60% 50% at 95% 4%,rgba(57,99,173,.18),transparent 70%),radial-gradient(ellipse 60% 60% at -10% 42%,rgba(32,163,167,.09),transparent 70%);pointer-events:none}
+body.light{color-scheme:light;--bg:#f3f7ff;--surface:#ffffff;--surface2:#eaf2ff;--text:#15243d;--muted:#55657d;--line:rgba(44,72,109,.17);--aqua:#087b91;--violet:#655dc5;--shadow:0 20px 65px rgba(44,72,109,.12)}
+body.light:before{opacity:.5}::selection{background:var(--aqua);color:var(--bg)}
+a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid var(--aqua);outline-offset:4px}
+#progress{position:fixed;inset:0 auto auto 0;height:3px;background:linear-gradient(90deg,var(--aqua),var(--violet));width:0;z-index:101;pointer-events:none}
+.container{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+nav{position:fixed;z-index:99;top:0;left:0;width:100%;background:rgba(8,14,28,.75);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+.light nav{background:rgba(246,249,255,.82)}
+.navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-size:13px;line-height:1.25;letter-spacing:.12em;font-weight:800}
+.brand em{font-style:normal;color:var(--muted);font-weight:600;font-size:10px;letter-spacing:.15em}
+.brandmark{height:43px;width:43px;border:1px solid rgba(80,226,231,.42);border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(80,226,231,.17),rgba(165,156,255,.12));color:var(--aqua);font:700 19px "IBM Plex Mono",monospace}
+.navlinks{display:flex;align-items:center;gap:30px}.navlinks a{font-size:13px;font-weight:700;color:var(--muted);transition:color .2s}.navlinks a:hover{color:var(--aqua)}
+.actions{display:flex;gap:9px;align-items:center}.iconbtn{border:1px solid var(--line);color:var(--text);background:var(--surface);border-radius:12px;min-width:41px;height:41px;padding:0 11px;cursor:pointer;font:700 13px "IBM Plex Mono",monospace}.iconbtn:hover{border-color:var(--aqua)}
+#menubtn{display:none}.button{display:inline-flex;justify-content:center;align-items:center;gap:9px;font-size:14px;font-weight:800;border:1px solid var(--line);padding:14px 22px;border-radius:13px;transition:transform .2s,border-color .2s,background .2s;cursor:pointer;white-space:nowrap}.button:hover{transform:translateY(-3px);border-color:var(--aqua)}
+.button.primary{background:linear-gradient(115deg,#49dbe5,#9790f7);border-color:transparent;color:#071422;box-shadow:0 12px 34px rgba(54,207,224,.17)}.button.ghost{background:var(--surface);color:var(--text)}
+.eyebrow{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.17em;text-transform:uppercase;color:var(--aqua);display:inline-flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:25px;height:1px;background:var(--aqua)}
+.hero{padding:171px 0 112px;position:relative}.herogrid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}
+.availability{border:1px solid rgba(80,226,231,.26);display:inline-flex;align-items:center;gap:10px;color:var(--aqua);font:600 12px "IBM Plex Mono",monospace;padding:8px 14px;border-radius:30px;background:rgba(80,226,231,.06)}
+.dot{height:7px;width:7px;background:var(--aqua);border-radius:50%;box-shadow:0 0 0 4px rgba(80,226,231,.12)}
+h1,h2,h3,p{margin-top:0}h1{font-size:clamp(44px,5.6vw,79px);letter-spacing:-.065em;line-height:1.08;margin:25px 0}h1 .gradient,.gradient{background:linear-gradient(100deg,var(--aqua),var(--violet));color:transparent;background-clip:text;-webkit-background-clip:text}
+.intro{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:29px}.heroctas{display:flex;flex-wrap:wrap;gap:13px}.herofoot{display:flex;flex-wrap:wrap;gap:17px;margin-top:39px;color:var(--muted);font:500 11px "IBM Plex Mono",monospace}.herofoot span:before{content:"◇";color:var(--aqua);margin-right:8px}
+.visual{position:relative;min-height:475px;display:grid;place-items:center}.visual:before{content:"";position:absolute;inset:10% 0;background:radial-gradient(circle,rgba(62,172,207,.2),transparent 63%);filter:blur(35px)}
+.orbit{position:absolute;border:1px dashed rgba(107,151,194,.27);border-radius:50%;width:420px;height:420px;animation:spin 50s linear infinite;max-width:100%}.orbit:after{content:"";position:absolute;top:16%;left:14%;width:9px;height:9px;background:var(--aqua);border-radius:50%;box-shadow:0 0 23px var(--aqua)}
+.terminal{position:relative;width:100%;max-width:420px;background:rgba(13,24,44,.94);border:1px solid rgba(126,166,219,.25);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(-2deg);transition:transform .45s}.terminal:hover{transform:rotate(0)}
+.termbar{height:46px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(255,255,255,.025);color:#7f98b7;font:500 11px "IBM Plex Mono",monospace}
+.traffic{display:flex;gap:7px}.traffic span{width:9px;height:9px;border-radius:50%;background:#f47776}.traffic span:nth-child(2){background:#f9cd66}.traffic span:nth-child(3){background:#55d6b6}
+.termcontent{padding:26px 25px;font:500 12px/2.1 "IBM Plex Mono",monospace;direction:ltr;text-align:left;color:#9bb9d0}.termcontent .cyan{color:#6ae5e9}.termcontent .violet{color:#bbafff}.termcontent .green{color:#80dfb9}.termcontent .dim{color:#6b849d}.termcontent .indent{padding-left:25px}.cursor{display:inline-block;width:7px;height:15px;background:var(--aqua);vertical-align:middle;animation:blink 1s step-end infinite}
+.floatbadge{position:absolute;right:-13px;bottom:7%;border-radius:14px;padding:13px 18px;background:var(--surface2);border:1px solid var(--line);font:600 12px "IBM Plex Mono",monospace;color:var(--aqua);box-shadow:var(--shadow)}
+section{padding:95px 0}#expertise,#about{background:linear-gradient(180deg,rgba(100,136,210,.035),rgba(100,136,210,.015))}
+.sectiontitle{max-width:750px;margin-bottom:36px}.sectiontitle h2{font-size:clamp(32px,4vw,48px);line-height:1.15;letter-spacing:-.04em;margin:13px 0 18px}.sectiontitle p{color:var(--muted);font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.skillcard,.project,.aboutcard,.contactbox{border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);position:relative;overflow:hidden}
+.skillcard{padding:29px;transition:transform .3s,border-color .3s}.skillcard:hover,.project:hover{transform:translateY(-5px);border-color:rgba(80,226,231,.45)}
+.skillicon{height:52px;width:52px;display:grid;place-items:center;background:linear-gradient(130deg,rgba(80,226,231,.13),rgba(165,156,255,.12));border:1px solid var(--line);border-radius:14px;margin-bottom:22px;color:var(--aqua);font:700 22px "IBM Plex Mono",monospace}
+.skillcard h3{font-size:19px;margin-bottom:11px}.skillcard p,.project p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{font:600 11px "IBM Plex Mono",monospace;color:var(--muted);padding:6px 10px;border:1px solid var(--line);background:rgba(98,142,191,.045);border-radius:8px}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project{padding:30px;transition:transform .3s,border-color .3s;min-height:280px;display:flex;flex-direction:column}.projecttop{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:25px}
+.projectnum{font:600 13px "IBM Plex Mono",monospace;color:var(--aqua)}.status{font:600 10px "IBM Plex Mono",monospace;border:1px solid var(--line);border-radius:20px;padding:6px 10px;color:var(--muted)}.status.public{color:var(--aqua);border-color:rgba(80,226,231,.3)}
+.project h3{font-size:25px;letter-spacing:-.03em;margin-bottom:10px}.project .pills{margin-top:auto}.project a.projectlink{display:inline-block;color:var(--aqua);font-weight:700;font-size:13px;margin-top:17px;align-self:flex-start}
+.note{margin-top:19px;color:var(--muted);font-size:12px}
+.aboutgrid{display:grid;grid-template-columns:290px 1fr;align-items:stretch;gap:23px}.portrait{min-height:320px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(80,226,231,.12),rgba(165,156,255,.13));border-radius:var(--radius);display:grid;place-items:center;position:relative;overflow:hidden}
+.portrait img{width:172px;height:172px;border-radius:50%;object-fit:cover;border:4px solid var(--surface2);box-shadow:0 20px 50px rgba(0,0,0,.15)}.portrait small{position:absolute;bottom:22px;font:600 12px "IBM Plex Mono",monospace;color:var(--aqua)}
+.aboutcard{padding:31px}.aboutcard h3{font-size:23px;margin-bottom:12px}.aboutcard p{color:var(--muted);font-size:15px}.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.principle{border:1px solid var(--line);padding:13px 15px;border-radius:12px;color:var(--text);font-size:13px;font-weight:700}.principle b{color:var(--aqua);margin-right:7px}
+.contactbox{padding:60px;display:flex;justify-content:space-between;align-items:center;gap:40px;background:linear-gradient(100deg,rgba(80,226,231,.08),rgba(165,156,255,.08)),var(--surface)}
+.contactbox h2{font-size:clamp(30px,4vw,47px);line-height:1.2;letter-spacing:-.04em;max-width:690px;margin:10px 0}.contactbox p{color:var(--muted);margin-bottom:0}.contactactions{display:flex;flex-direction:column;gap:12px}
+footer{border-top:1px solid var(--line);padding:27px 0 40px;color:var(--muted);font-size:13px}.footinner{display:flex;justify-content:space-between;gap:15px;align-items:center}.footlinks{display:flex;gap:24px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes blink{50%{opacity:0}}
+@media(max-width:980px){.navlinks{gap:16px}.herogrid{grid-template-columns:1fr}.hero{padding-bottom:50px}.visual{min-height:395px}.grid3{grid-template-columns:repeat(2,1fr)}.contactbox{padding:35px}}
+@media(max-width:680px){.container{width:min(100% - 32px,1160px)}.navin{height:69px}.brand{font-size:11px}.brandmark{width:38px;height:38px}.navlinks{display:none;position:absolute;top:69px;left:16px;right:16px;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:10px}#menubtn{display:block}.hero{padding-top:137px}.heroctas{flex-direction:column;align-items:stretch}.heroctas a{text-align:center}.visual{min-height:355px}.orbit{width:315px;height:315px}.terminal{max-width:340px}.termcontent{font-size:10.5px}.floatbadge{right:0}.grid3,.projects,.aboutgrid{grid-template-columns:1fr}.aboutgrid{gap:16px}.portrait{min-height:260px}.contactbox{padding:28px;flex-direction:column;align-items:stretch}.contactactions .button{width:100%}.footinner{flex-direction:column;text-align:center}.herofoot{gap:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-    <h1>مرحبًا بك في موقعي المستضاف على GitHub Pages</h1>
-    <p>تم تشغيل الموقع بنجاح!</p>
+<div id="progress"></div>
+<nav aria-label="Main navigation">
+ <div class="container navin">
+  <a class="brand" href="#home" aria-label="Home"><span class="brandmark">HM</span><span>HUSSEIN ALI MUSTAFA<br><em>ENGINEERING PORTFOLIO</em></span></a>
+  <div class="navlinks" id="navlinks"><a href="#home" data-t="navHome">Home</a><a href="#expertise" data-t="navSkills">Expertise</a><a href="#work" data-t="navWork">Work</a><a href="#about" data-t="navAbout">About</a><a href="#contact" data-t="navContact">Contact</a></div>
+  <div class="actions"><button class="iconbtn" id="langbtn" aria-label="Switch language">AR</button><button class="iconbtn" id="themebtn" aria-label="Toggle theme">☼</button><button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-expanded="false">☰</button></div>
+ </div>
+</nav>
+<main>
+<section class="hero" id="home">
+ <div class="container herogrid">
+  <div class="reveal">
+   <span class="availability"><span class="dot"></span><span data-t="tagline">SOFTWARE ENGINEERING / DIGITAL PRODUCTS</span></span>
+   <h1><span data-t="hero1">Engineering</span><br><span class="gradient" data-t="hero2">what's next.</span></h1>
+   <p class="intro" data-t="heroDesc">I'm Hussein Ali Mustafa, a software-focused engineer turning complex ideas into thoughtful web platforms, mobile experiences and connected systems.</p>
+   <div class="heroctas"><a class="button primary" href="#work"><span data-t="explore">Explore my work</span> <span aria-hidden="true">↗</span></a><a class="button ghost" href="https://github.com/Alrees2" target="_blank" rel="noopener noreferrer"><span data-t="github">View GitHub</span> ↗</a></div>
+   <div class="herofoot"><span data-t="web">WEB & CLOUD</span><span data-t="mobile">FLUTTER & MOBILE</span><span data-t="systems">SYSTEM DESIGN</span></div>
+  </div>
+  <div class="visual reveal" aria-label="Decorative software engineering terminal illustration">
+   <div class="orbit" aria-hidden="true"></div>
+   <div class="terminal"><div class="termbar"><span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span><span>engineer@portfolio:~/build</span><span>⌘</span></div>
+    <div class="termcontent">
+     <div class="dim">// engineering / process</div>
+     <div><span class="violet">const</span> <span class="cyan">developer</span> = {</div>
+     <div class="indent">name: <span class="green">"Hussein Ali Mustafa"</span>,</div>
+     <div class="indent">focus: [<span class="green">"web"</span>, <span class="green">"mobile"</span>, <span class="green">"cloud"</span>],</div>
+     <div class="indent">principles: [</div>
+     <div class="indent">  <span class="green">"build with purpose"</span>,</div>
+     <div class="indent">  <span class="green">"design for people"</span>,</div>
+     <div class="indent">  <span class="green">"improve continuously"</span></div>
+     <div class="indent">]</div><div>};</div><br>
+     <div><span class="cyan">deploy</span>(developer);</div>
+     <div><span class="green">✓</span> Ready to create <span class="cursor" aria-hidden="true"></span></div>
+    </div>
+   </div><div class="floatbadge">◈ DESIGN · DEVELOP · DELIVER</div>
+  </div>
+ </div>
+</section>
+<section id="expertise">
+ <div class="container">
+  <div class="sectiontitle reveal"><span class="eyebrow" data-t="skillsLabel">CAPABILITIES</span><h2 data-t="skillsHead">Tools chosen for real-world problems.</h2><p data-t="skillsDesc">Building across the stack, from intuitive interfaces to dependable integration and deployment.</p></div>
+  <div class="grid3">
+   <article class="skillcard reveal"><div class="skillicon" aria-hidden="true">&lt;/&gt;</div><h3 data-t="webTitle">Web engineering</h3><p data-t="webDesc">Modern, responsive interfaces and connected web applications.</p><div class="pills"><span class="pill">React</span><span class="pill">Next.js</span><span class="pill">TypeScript</span><span class="pill">HTML / CSS</span></div></article>
+   <article class="skillcard reveal"><div class="skillicon" aria-hidden="true">▣</div><h3 data-t="mobileTitle">Mobile products</h3><p data-t="mobileDesc">Mobile-first experiences connected to live data and services.</p><div class="pills"><span class="pill">Flutter</span><span class="pill">Dart</span><span class="pill">Firebase</span><span class="pill">REST APIs</span></div></article>
+   <article class="skillcard reveal"><div class="skillicon" aria-hidden="true">◇</div><h3 data-t="cloudTitle">Data & cloud</h3><p data-t="cloudDesc">Application backends, database integration and modern delivery workflows.</p><div class="pills"><span class="pill">Supabase</span><span class="pill">PostgreSQL</span><span class="pill">Cloudflare</span><span class="pill">GitHub</span></div></article>
+  </div>
+ </div>
+</section>
+<section id="work">
+ <div class="container">
+  <div class="sectiontitle reveal"><span class="eyebrow" data-t="workLabel">SELECTED WORK</span><h2 data-t="workHead">Products, platforms and experiments.</h2><p data-t="workDesc">A selection of projects from my engineering journey. Private projects are shared as high-level case studies only.</p></div>
+  <div class="projects">
+   <article class="project reveal"><div class="projecttop"><span class="projectnum">01 / EDU</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>EDUVERSE Iraq</h3><p data-t="eduDesc">University-focused digital platform exploring academic services, administrative capabilities and cloud-based delivery.</p><div class="pills"><span class="pill">Next.js</span><span class="pill">Supabase</span><span class="pill">Cloudflare</span></div></article>
+   <article class="project reveal"><div class="projecttop"><span class="projectnum">02 / MOBILE</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>HAQO Flutter</h3><p data-t="haqoDesc">Social mobile application work across user profiles, feeds, messaging, media and notification integration.</p><div class="pills"><span class="pill">Flutter</span><span class="pill">Firebase</span><span class="pill">REST API</span></div></article>
+   <article class="project reveal"><div class="projecttop"><span class="projectnum">03 / WEB</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>Seeraty Pro</h3><p data-t="cvDesc">A CV and professional-profile web project focused on presenting information in a useful, accessible format.</p><div class="pills"><span class="pill">React</span><span class="pill">Vite</span><span class="pill">Supabase</span></div></article>
+   <article class="project reveal"><div class="projecttop"><span class="projectnum">04 / UI</span><span class="status public" data-t="public">PUBLIC REPOSITORY</span></div><h3>SocialVerse</h3><p data-t="socialDesc">An Arabic-first social interface experiment with responsive front-end design and interactive user experiences.</p><div class="pills"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div><a class="projectlink" href="https://github.com/Alrees2/chat" target="_blank" rel="noopener noreferrer" data-t="browseSource">Explore repository ↗</a></article>
+  </div>
+  <p class="note" data-t="privateNote">Private repositories remain private. Project descriptions are summaries, not claims of production adoption or public release.</p>
+ </div>
+</section>
+<section id="about">
+ <div class="container">
+  <div class="sectiontitle reveal"><span class="eyebrow" data-t="aboutLabel">THE PERSON BEHIND THE CODE</span><h2 data-t="aboutHead">Engineering with intention.</h2></div>
+  <div class="aboutgrid">
+   <div class="portrait reveal"><img src="https://avatars.githubusercontent.com/u/138582703?v=4" alt="Hussein Ali Mustafa GitHub avatar" loading="lazy"><small>github / Alrees2</small></div>
+   <div class="aboutcard reveal"><h3 data-t="aboutTitle">Hello, I'm Hussein.</h3><p data-t="aboutText1">I'm an engineer and software developer based in Iraq. I enjoy exploring how useful software is designed, structured and delivered — especially educational systems, social experiences and everyday digital tools.</p><p data-t="aboutText2">I focus on clear interfaces, practical architectures, dependable API integrations and a learning mindset. For me, good engineering means solving meaningful problems while staying curious about better ways to build.</p><div class="principles"><div class="principle"><b>01.</b><span data-t="p1">Problem-first thinking</span></div><div class="principle"><b>02.</b><span data-t="p2">User-centered design</span></div><div class="principle"><b>03.</b><span data-t="p3">Careful implementation</span></div><div class="principle"><b>04.</b><span data-t="p4">Continuous improvement</span></div></div></div>
+  </div>
+ </div>
+</section>
+<section id="contact">
+ <div class="container"><div class="contactbox reveal"><div><span class="eyebrow" data-t="contactLabel">LET'S CONNECT</span><h2 data-t="contactHead">Have an idea worth building?</h2><p data-t="contactDesc">Reach out to discuss software, systems or a thoughtful collaboration.</p></div><div class="contactactions"><a class="button primary" href="mailto:afurolul@gmail.com"><span data-t="emailMe">Send an email</span> ↗</a><a class="button ghost" href="https://github.com/Alrees2" target="_blank" rel="noopener noreferrer"><span data-t="github">View GitHub</span> ↗</a></div></div></div>
+</section>
+</main>
+<footer><div class="container footinner"><span>© <span id="year">2026</span> Hussein Ali Mustafa · <span data-t="footer">Designed with an engineering mindset.</span></span><div class="footlinks"><a href="https://github.com/Alrees2" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:afurolul@gmail.com">Email ↗</a><a href="#home" data-t="top">Back to top ↑</a></div></div></footer>
+<script>
+(()=>{
+  'use strict';
+  const t={
+    en:{navHome:'Home',navSkills:'Expertise',navWork:'Work',navAbout:'About',navContact:'Contact',tagline:'SOFTWARE ENGINEERING / DIGITAL PRODUCTS',hero1:'Engineering',hero2:"what's next.",heroDesc:"I'm Hussein Ali Mustafa, a software-focused engineer turning complex ideas into thoughtful web platforms, mobile experiences and connected systems.",explore:'Explore my work',github:'View GitHub',web:'WEB & CLOUD',mobile:'FLUTTER & MOBILE',systems:'SYSTEM DESIGN',skillsLabel:'CAPABILITIES',skillsHead:'Tools chosen for real-world problems.',skillsDesc:'Building across the stack, from intuitive interfaces to dependable integration and deployment.',webTitle:'Web engineering',webDesc:'Modern, responsive interfaces and connected web applications.',mobileTitle:'Mobile products',mobileDesc:'Mobile-first experiences connected to live data and services.',cloudTitle:'Data & cloud',cloudDesc:'Application backends, database integration and modern delivery workflows.',workLabel:'SELECTED WORK',workHead:'Products, platforms and experiments.',workDesc:'A selection of projects from my engineering journey. Private projects are shared as high-level case studies only.',private:'PRIVATE CODEBASE',public:'PUBLIC REPOSITORY',eduDesc:'University-focused digital platform exploring academic services, administrative capabilities and cloud-based delivery.',haqoDesc:'Social mobile application work across user profiles, feeds, messaging, media and notification integration.',cvDesc:'A CV and professional-profile web project focused on presenting information in a useful, accessible format.',socialDesc:'An Arabic-first social interface experiment with responsive front-end design and interactive user experiences.',browseSource:'Explore repository ↗',privateNote:'Private repositories remain private. Project descriptions are summaries, not claims of production adoption or public release.',aboutLabel:'THE PERSON BEHIND THE CODE',aboutHead:'Engineering with intention.',aboutTitle:"Hello, I'm Hussein.",aboutText1:"I'm an engineer and software developer based in Iraq. I enjoy exploring how useful software is designed, structured and delivered — especially educational systems, social experiences and everyday digital tools.",aboutText2:'I focus on clear interfaces, practical architectures, dependable API integrations and a learning mindset. For me, good engineering means solving meaningful problems while staying curious about better ways to build.',p1:'Problem-first thinking',p2:'User-centered design',p3:'Careful implementation',p4:'Continuous improvement',contactLabel:"LET'S CONNECT",contactHead:'Have an idea worth building?',contactDesc:'Reach out to discuss software, systems or a thoughtful collaboration.',emailMe:'Send an email',footer:'Designed with an engineering mindset.',top:'Back to top ↑'},
+    ar:{navHome:'الرئيسية',navSkills:'المهارات',navWork:'المشاريع',navAbout:'نبذة عني',navContact:'التواصل',tagline:'هندسة البرمجيات / المنتجات الرقمية',hero1:'أُحوّل الأفكار',hero2:'إلى أنظمة متكاملة.',heroDesc:'أنا حسين علي مصطفى، مهندس ومطور برمجيات أهتم ببناء منصات الويب وتطبيقات الموبايل والأنظمة المترابطة، من الفكرة إلى التجربة العملية.',explore:'شاهد أعمالي',github:'حساب GitHub',web:'الويب والحوسبة السحابية',mobile:'فلاتر والموبايل',systems:'تصميم الأنظمة',skillsLabel:'مجالات العمل',skillsHead:'تقنيات لخدمة حلول حقيقية.',skillsDesc:'من الواجهات الواضحة إلى تكامل الخدمات وقواعد البيانات والنشر السحابي.',webTitle:'هندسة الويب',webDesc:'واجهات متجاوبة وتطبيقات ويب حديثة متصلة بالخدمات.',mobileTitle:'تطبيقات الموبايل',mobileDesc:'تجارب موبايل مرتبطة ببيانات وخدمات فعلية.',cloudTitle:'البيانات والسحابة',cloudDesc:'الخدمات الخلفية وقواعد البيانات وعمليات النشر الحديثة.',workLabel:'أعمال مختارة',workHead:'مشاريع ومنصات وتجارب.',workDesc:'نماذج من أعمالي البرمجية، والمشاريع الخاصة معروضة هنا كنبذة عامة فقط.',private:'مستودع خاص',public:'مستودع عام',eduDesc:'منصة رقمية جامعية تستكشف الخدمات الأكاديمية والإدارية والنشر السحابي.',haqoDesc:'تطبيق اجتماعي بالموبايل يشمل العمل على الملفات الشخصية والمنشورات والمراسلة والوسائط والإشعارات.',cvDesc:'مشروع ويب لإنشاء السير الذاتية والملفات المهنية وعرض المعلومات بوضوح وسهولة.',socialDesc:'تجربة واجهة اجتماعية باللغة العربية تركّز على التصميم المتجاوب والتفاعل.',browseSource:'استعرض المستودع ↗',privateNote:'تبقى المستودعات الخاصة غير منشورة. الأوصاف نبذات عامة ولا تعني أن المشروع مطروح للإنتاج أو للعامة.',aboutLabel:'خلف الكود',aboutHead:'هندسة لها هدف.',aboutTitle:'مرحباً، أنا حسين.',aboutText1:'أنا مهندس ومطور برمجيات من العراق. أهتم بكيفية تصميم البرمجيات المفيدة وبنائها، خصوصاً الأنظمة التعليمية والتجارب الاجتماعية والأدوات الرقمية اليومية.',aboutText2:'أهتم بوضوح الواجهات وبنية الأنظمة وتكامل واجهات البرمجة، وأؤمن بالتعلم المستمر وتحسين جودة المنتج.',p1:'فهم المشكلة أولاً',p2:'تصميم يخدم المستخدم',p3:'تنفيذ مدروس',p4:'تحسين مستمر',contactLabel:'خلّينا نتواصل',contactHead:'عندك فكرة تستحق التنفيذ؟',contactDesc:'تواصل وياي لمناقشة البرمجيات والأنظمة وفرص التعاون.',emailMe:'أرسل بريد إلكتروني',footer:'صُنع بعقلية هندسية.',top:'العودة للأعلى ↑'}
+  };
+  const $=s=>document.querySelector(s);
+  const all=s=>[...document.querySelectorAll(s)];
+  const saved=(k,fallback)=>{try{return localStorage.getItem(k)||fallback}catch{return fallback}};
+  const save=(k,v)=>{try{localStorage.setItem(k,v)}catch{}};
+  function language(lang){const ar=lang==='ar';document.documentElement.lang=lang;document.documentElement.dir=ar?'rtl':'ltr';document.body.dir=ar?'rtl':'ltr';all('[data-t]').forEach(el=>{const str=t[lang][el.dataset.t];if(str)el.textContent=str});$('#langbtn').textContent=ar?'EN':'AR';$('#langbtn').setAttribute('aria-label',ar?'Switch to English':'التبديل إلى العربية');save('portfolio-language',lang)}
+  $('#langbtn').addEventListener('click',()=>language(document.documentElement.lang==='en'?'ar':'en'));
+  function theme(light){document.body.classList.toggle('light',light);$('#themebtn').textContent=light?'☾':'☼';$('#themebtn').setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');save('portfolio-theme',light?'light':'dark')}
+  $('#themebtn').addEventListener('click',()=>theme(!document.body.classList.contains('light')));
+  const menu=$('#navlinks'),mb=$('#menubtn');mb.addEventListener('click',()=>{const open=menu.classList.toggle('open');mb.setAttribute('aria-expanded',String(open));mb.textContent=open?'✕':'☰'});all('.navlinks a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='☰'}));
+  const observer=('IntersectionObserver'in window)?new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}}),{threshold:.08}):null;
+  all('.reveal').forEach(el=>observer?observer.observe(el):el.classList.add('show'));
+  let ticking=false;function progress(){const max=document.documentElement.scrollHeight-window.innerHeight;$('#progress').style.width=(max>0?Math.min(100,window.scrollY/max*100):0)+'%';ticking=false}window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(progress);ticking=true}},{passive:true});
+  $('#year').textContent=String(new Date().getFullYear());language(saved('portfolio-language','en')==='ar'?'ar':'en');theme(saved('portfolio-theme','dark')==='light');progress();
+})();
+</script>
 </body>
 </html>
