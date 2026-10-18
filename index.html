@@ -67,15 +67,68 @@ footer{border-top:1px solid var(--line);padding:27px 0 40px;color:var(--muted);f
 @media(max-width:980px){.navlinks{gap:16px}.herogrid{grid-template-columns:1fr}.hero{padding-bottom:50px}.visual{min-height:395px}.grid3{grid-template-columns:repeat(2,1fr)}.contactbox{padding:35px}}
 @media(max-width:680px){.container{width:min(100% - 32px,1160px)}.navin{height:69px}.brand{font-size:11px}.brandmark{width:38px;height:38px}.navlinks{display:none;position:absolute;top:69px;left:16px;right:16px;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:10px}#menubtn{display:block}.hero{padding-top:137px}.heroctas{flex-direction:column;align-items:stretch}.heroctas a{text-align:center}.visual{min-height:355px}.orbit{width:315px;height:315px}.terminal{max-width:340px}.termcontent{font-size:10.5px}.floatbadge{right:0}.grid3,.projects,.aboutgrid{grid-template-columns:1fr}.aboutgrid{gap:16px}.portrait{min-height:260px}.contactbox{padding:28px;flex-direction:column;align-items:stretch}.contactactions .button{width:100%}.footinner{flex-direction:column;text-align:center}.herofoot{gap:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* v2: interaction, portfolio discovery, engineering identity */
+:root{--glass:rgba(19,37,63,.7)}
+body.light{--glass:rgba(245,249,255,.78)}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.045;background-image:radial-gradient(var(--text) .65px,transparent .65px);background-size:17px 17px;mask-image:linear-gradient(180deg,black,transparent 95%)}
+.mouseglow{position:fixed;z-index:-1;pointer-events:none;width:510px;height:510px;left:var(--cursor-x,50%);top:var(--cursor-y,30%);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(46,182,226,.07) 0,rgba(122,83,221,.04) 33%,transparent 67%);transition:left .16s linear,top .16s linear}
+.accent-label{display:inline-flex;gap:8px;align-items:center;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.09em;color:var(--aqua)}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--aqua);box-shadow:0 0 13px rgba(80,226,231,.5)}
+.hero .intro strong{color:var(--text)}
+.terminal:after{content:"";position:absolute;pointer-events:none;inset:0;border-radius:20px;box-shadow:inset 0 0 60px rgba(56,193,224,.055)}
+.mesh{position:absolute;width:440px;height:440px;max-width:106%;opacity:.55;z-index:-1;animation:slowfloat 12s ease-in-out infinite}
+.mesh line{stroke:var(--aqua);stroke-width:1;opacity:.2}.mesh circle{fill:var(--aqua);opacity:.7}
+@keyframes slowfloat{50%{transform:translateY(-17px) rotate(8deg)}}
+.telemetry{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
+.telemetry span{display:inline-flex;gap:8px;align-items:center;color:var(--muted);background:var(--glass);border:1px solid var(--line);border-radius:9px;padding:7px 12px;font:500 10px "IBM Plex Mono",monospace}
+.telemetry b{color:var(--aqua);font-weight:700}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 23px}
+.filter-btn{font:700 12px "IBM Plex Mono",monospace;cursor:pointer;color:var(--muted);padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:var(--surface);transition:.2s}
+.filter-btn:hover,.filter-btn[aria-pressed=true]{color:var(--bg);background:var(--aqua);border-color:var(--aqua)}
+.project[hidden]{display:none!important}.project{isolation:isolate}.project:before{content:"";z-index:-1;position:absolute;inset:0;opacity:0;background:radial-gradient(circle at 100% 0%,rgba(80,226,231,.1),transparent 62%);transition:opacity .2s}.project:hover:before{opacity:1}
+.case-actions{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:19px;flex-wrap:wrap}
+.case-button{padding:0;border:0;background:none;cursor:pointer;color:var(--aqua);font:700 13px "DM Sans",sans-serif}
+.case-button:hover{text-decoration:underline}
+.repo-section{margin-top:56px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(110deg,rgba(80,226,231,.025),rgba(165,156,255,.035)),var(--surface);padding:26px}
+.repo-head{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}.repo-head h3{margin:0;font-size:19px}
+.repo-head a{font-size:13px;font-weight:700;color:var(--aqua)}
+.repo-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.repo-card{display:flex;flex-direction:column;gap:8px;padding:15px;min-height:145px;background:var(--bg);border:1px solid var(--line);border-radius:14px;transition:border-color .2s}
+.repo-card:hover{border-color:var(--aqua)}.repo-card .repo-title{font-size:14px;font-weight:800;overflow-wrap:anywhere}.repo-card .repo-desc{font-size:12px;color:var(--muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.repo-card .repo-meta{font:500 10px "IBM Plex Mono",monospace;color:var(--aqua);margin-top:auto}
+#liveNote{font-size:12px;color:var(--muted)}
+.processgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+.processcard{padding:22px 18px;border:1px solid var(--line);border-radius:17px;background:var(--surface);position:relative;min-height:195px}
+.processcard:before{content:"";position:absolute;top:44px;right:-15px;width:15px;height:1px;background:var(--aqua);opacity:.4}
+.processcard:last-child:before{display:none}.processno{color:var(--aqua);font:700 20px "IBM Plex Mono",monospace;margin-bottom:29px}
+.processcard h3{font-size:17px;margin-bottom:7px}.processcard p{font-size:13px;color:var(--muted)}
+#cmdButton{color:var(--aqua);font-size:11px;min-width:63px;padding-inline:9px}
+dialog{color:var(--text);background:var(--surface);border:1px solid rgba(80,226,231,.3);box-shadow:var(--shadow);border-radius:20px;padding:0;width:min(600px,calc(100% - 28px));max-height:80vh;overflow:auto}
+dialog::backdrop{background:rgba(1,5,15,.75);backdrop-filter:blur(8px)}
+.dialogbox{padding:25px}.dialogtop{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.dialogtop h2{margin:0;font-size:23px}.dialogclose{background:var(--surface2);border:1px solid var(--line);color:var(--text);border-radius:10px;width:37px;height:37px;cursor:pointer}
+.dialogbox p{color:var(--muted);font-size:14px}.dialogtech{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.searchinput{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:13px;padding:17px;font:500 14px "DM Sans",sans-serif;margin:18px 0}
+.searchinput:focus{outline:2px solid var(--aqua)}
+.command-list{display:grid;gap:6px}.command-item{border:1px solid transparent;display:flex;justify-content:space-between;align-items:center;padding:13px;border-radius:11px;font-weight:700;font-size:14px}.command-item:hover,.command-item:focus{background:var(--surface2);border-color:var(--line)}
+.command-item span{font:500 11px "IBM Plex Mono",monospace;color:var(--aqua)}
+a.floating-contact{position:fixed;z-index:50;bottom:23px;right:25px;background:linear-gradient(135deg,#50e2e7,#a59cff);color:#081422;width:53px;height:53px;display:grid;place-items:center;border-radius:18px;box-shadow:0 12px 35px rgba(80,226,231,.22);font:900 25px sans-serif;transition:transform .2s}
+a.floating-contact:hover{transform:translateY(-5px)}
+[dir=rtl] .floating-contact{right:auto;left:25px}
+@media(max-width:1080px){.repo-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.processgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.processcard:before{display:none}}
+@media(max-width:680px){#cmdButton{display:none}.repo-cards,.processgrid{grid-template-columns:1fr}.mesh{max-width:100%}.repo-head{flex-wrap:wrap}.repo-section{padding:18px}.processcard{min-height:auto}.telemetry{justify-content:flex-start}a.floating-contact{right:13px;bottom:14px;width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.mesh{animation:none}}
+
 </style>
 </head>
 <body>
-<div id="progress"></div>
+<div id="progress"></div><div class="mouseglow" aria-hidden="true"></div>
 <nav aria-label="Main navigation">
  <div class="container navin">
   <a class="brand" href="#home" aria-label="Home"><span class="brandmark">HM</span><span>HUSSEIN ALI MUSTAFA<br><em>ENGINEERING PORTFOLIO</em></span></a>
-  <div class="navlinks" id="navlinks"><a href="#home" data-t="navHome">Home</a><a href="#expertise" data-t="navSkills">Expertise</a><a href="#work" data-t="navWork">Work</a><a href="#about" data-t="navAbout">About</a><a href="#contact" data-t="navContact">Contact</a></div>
-  <div class="actions"><button class="iconbtn" id="langbtn" aria-label="Switch language">AR</button><button class="iconbtn" id="themebtn" aria-label="Toggle theme">☼</button><button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-expanded="false">☰</button></div>
+  <div class="navlinks" id="navlinks"><a href="#home" data-t="navHome">Home</a><a href="#expertise" data-t="navSkills">Expertise</a><a href="#work" data-t="navWork">Work</a><a href="#process" data-xen="Process" data-xar="المنهج">Process</a><a href="#about" data-t="navAbout">About</a><a href="#contact" data-t="navContact">Contact</a></div>
+  <div class="actions"><button class="iconbtn" id="cmdButton" aria-label="Open quick navigation" title="Quick navigation (Ctrl + K)">⌘ K</button><button class="iconbtn" id="langbtn" aria-label="Switch language">AR</button><button class="iconbtn" id="themebtn" aria-label="Toggle theme">☼</button><button class="iconbtn" id="menubtn" aria-label="Open navigation" aria-expanded="false">☰</button></div>
  </div>
 </nav>
 <main>
@@ -86,10 +139,11 @@ footer{border-top:1px solid var(--line);padding:27px 0 40px;color:var(--muted);f
    <h1><span data-t="hero1">Engineering</span><br><span class="gradient" data-t="hero2">what's next.</span></h1>
    <p class="intro" data-t="heroDesc">I'm Hussein Ali Mustafa, a software-focused engineer turning complex ideas into thoughtful web platforms, mobile experiences and connected systems.</p>
    <div class="heroctas"><a class="button primary" href="#work"><span data-t="explore">Explore my work</span> <span aria-hidden="true">↗</span></a><a class="button ghost" href="https://github.com/Alrees2" target="_blank" rel="noopener noreferrer"><span data-t="github">View GitHub</span> ↗</a></div>
-   <div class="herofoot"><span data-t="web">WEB & CLOUD</span><span data-t="mobile">FLUTTER & MOBILE</span><span data-t="systems">SYSTEM DESIGN</span></div>
+   <div class="telemetry" aria-label="Engineering domains"><span><b>01</b> WEB</span><span><b>02</b> MOBILE</span><span><b>03</b> DATA</span><span><b>04</b> CLOUD</span></div><div class="herofoot"><span data-t="web">WEB & CLOUD</span><span data-t="mobile">FLUTTER & MOBILE</span><span data-t="systems">SYSTEM DESIGN</span></div>
   </div>
   <div class="visual reveal" aria-label="Decorative software engineering terminal illustration">
    <div class="orbit" aria-hidden="true"></div>
+   <svg class="mesh" aria-hidden="true" viewBox="0 0 430 430"><g><line x1="30" y1="40" x2="200" y2="20"/><line x1="200" y1="20" x2="396" y2="97"/><line x1="396" y1="97" x2="379" y2="332"/><line x1="379" y1="332" x2="170" y2="417"/><line x1="170" y1="417" x2="30" y2="290"/><line x1="30" y1="290" x2="30" y2="40"/><line x1="30" y1="40" x2="379" y2="332"/><line x1="396" y1="97" x2="30" y2="290"/><line x1="200" y1="20" x2="170" y2="417"/></g><g><circle cx="30" cy="40" r="4"/><circle cx="200" cy="20" r="4"/><circle cx="396" cy="97" r="4"/><circle cx="379" cy="332" r="4"/><circle cx="170" cy="417" r="4"/><circle cx="30" cy="290" r="4"/></g></svg>
    <div class="terminal"><div class="termbar"><span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span><span>engineer@portfolio:~/build</span><span>⌘</span></div>
     <div class="termcontent">
      <div class="dim">// engineering / process</div>
@@ -121,13 +175,32 @@ footer{border-top:1px solid var(--line);padding:27px 0 40px;color:var(--muted);f
 <section id="work">
  <div class="container">
   <div class="sectiontitle reveal"><span class="eyebrow" data-t="workLabel">SELECTED WORK</span><h2 data-t="workHead">Products, platforms and experiments.</h2><p data-t="workDesc">A selection of projects from my engineering journey. Private projects are shared as high-level case studies only.</p></div>
+  <div class="filters" role="group" aria-label="Filter projects">
+    <button class="filter-btn" data-filter="all" data-xen="All projects" data-xar="كل المشاريع" aria-pressed="true">All projects</button>
+    <button class="filter-btn" data-filter="web" data-xen="Web & cloud" data-xar="الويب والسحابة" aria-pressed="false">Web & cloud</button>
+    <button class="filter-btn" data-filter="mobile" data-xen="Mobile" data-xar="الموبايل" aria-pressed="false">Mobile</button>
+    <button class="filter-btn" data-filter="ui" data-xen="Product UI" data-xar="واجهات المنتجات" aria-pressed="false">Product UI</button>
+   </div>
   <div class="projects">
-   <article class="project reveal"><div class="projecttop"><span class="projectnum">01 / EDU</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>EDUVERSE Iraq</h3><p data-t="eduDesc">University-focused digital platform exploring academic services, administrative capabilities and cloud-based delivery.</p><div class="pills"><span class="pill">Next.js</span><span class="pill">Supabase</span><span class="pill">Cloudflare</span></div></article>
-   <article class="project reveal"><div class="projecttop"><span class="projectnum">02 / MOBILE</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>HAQO Flutter</h3><p data-t="haqoDesc">Social mobile application work across user profiles, feeds, messaging, media and notification integration.</p><div class="pills"><span class="pill">Flutter</span><span class="pill">Firebase</span><span class="pill">REST API</span></div></article>
-   <article class="project reveal"><div class="projecttop"><span class="projectnum">03 / WEB</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>Seeraty Pro</h3><p data-t="cvDesc">A CV and professional-profile web project focused on presenting information in a useful, accessible format.</p><div class="pills"><span class="pill">React</span><span class="pill">Vite</span><span class="pill">Supabase</span></div></article>
-   <article class="project reveal"><div class="projecttop"><span class="projectnum">04 / UI</span><span class="status public" data-t="public">PUBLIC REPOSITORY</span></div><h3>SocialVerse</h3><p data-t="socialDesc">An Arabic-first social interface experiment with responsive front-end design and interactive user experiences.</p><div class="pills"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div><a class="projectlink" href="https://github.com/Alrees2/chat" target="_blank" rel="noopener noreferrer" data-t="browseSource">Explore repository ↗</a></article>
+   <article class="project reveal" data-category="web" data-case="edu"><div class="projecttop"><span class="projectnum">01 / EDU</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>EDUVERSE Iraq</h3><p data-t="eduDesc">University-focused digital platform exploring academic services, administrative capabilities and cloud-based delivery.</p><div class="pills"><span class="pill">Next.js</span><span class="pill">Supabase</span><span class="pill">Cloudflare</span></div></article>
+   <article class="project reveal" data-category="mobile" data-case="haqo"><div class="projecttop"><span class="projectnum">02 / MOBILE</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>HAQO Flutter</h3><p data-t="haqoDesc">Social mobile application work across user profiles, feeds, messaging, media and notification integration.</p><div class="pills"><span class="pill">Flutter</span><span class="pill">Firebase</span><span class="pill">REST API</span></div></article>
+   <article class="project reveal" data-category="web" data-case="cv"><div class="projecttop"><span class="projectnum">03 / WEB</span><span class="status" data-t="private">PRIVATE CODEBASE</span></div><h3>Seeraty Pro</h3><p data-t="cvDesc">A CV and professional-profile web project focused on presenting information in a useful, accessible format.</p><div class="pills"><span class="pill">React</span><span class="pill">Vite</span><span class="pill">Supabase</span></div></article>
+   <article class="project reveal" data-category="ui" data-case="social"><div class="projecttop"><span class="projectnum">04 / UI</span><span class="status public" data-t="public">PUBLIC REPOSITORY</span></div><h3>SocialVerse</h3><p data-t="socialDesc">An Arabic-first social interface experiment with responsive front-end design and interactive user experiences.</p><div class="pills"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div><a class="projectlink" href="https://github.com/Alrees2/chat" target="_blank" rel="noopener noreferrer" data-t="browseSource">Explore repository ↗</a></article>
   </div>
+  <div class="repo-section reveal" aria-label="Public GitHub repository feed"><div class="repo-head"><div><span class="accent-label"><span class="live-dot"></span> GITHUB / PUBLIC ACTIVITY</span><h3 data-xen="Recent public repositories" data-xar="أحدث المستودعات العامة">Recent public repositories</h3></div><a href="https://github.com/Alrees2?tab=repositories" target="_blank" rel="noopener noreferrer" data-xen="See all on GitHub ↗" data-xar="جميع المشاريع على GitHub ↗">See all on GitHub ↗</a></div><div class="repo-cards" id="repoFeed" aria-live="polite"><p id="liveNote" data-xen="Loading public GitHub projects…" data-xar="جاري تحميل المشاريع العامة…">Loading public GitHub projects…</p></div></div>
   <p class="note" data-t="privateNote">Private repositories remain private. Project descriptions are summaries, not claims of production adoption or public release.</p>
+ </div>
+</section>
+<section id="process">
+ <div class="container">
+  <div class="sectiontitle reveal"><span class="eyebrow" data-xen="MY WORKFLOW" data-xar="منهجية العمل">MY WORKFLOW</span><h2 data-xen="From complex problem to clear solution." data-xar="من مشكلة معقدة إلى حل واضح.">From complex problem to clear solution.</h2><p data-xen="A practical engineering process focused on outcomes, not just code." data-xar="منهج هندسي عملي يركز على النتائج وليس على كتابة الكود فقط.">A practical engineering process focused on outcomes, not just code.</p></div>
+  <div class="processgrid">
+   <div class="processcard reveal"><div class="processno">01 /</div><h3 data-xen="Discover" data-xar="التحليل">Discover</h3><p data-xen="Learn requirements, users and constraints." data-xar="فهم المتطلبات والمستخدمين والقيود.">Learn requirements, users and constraints.</p></div>
+   <div class="processcard reveal"><div class="processno">02 /</div><h3 data-xen="Design" data-xar="التصميم">Design</h3><p data-xen="Shape the architecture and experience." data-xar="تصميم بنية النظام وتجربة الاستخدام.">Shape the architecture and experience.</p></div>
+   <div class="processcard reveal"><div class="processno">03 /</div><h3 data-xen="Build" data-xar="التطوير">Build</h3><p data-xen="Implement clean and purposeful features." data-xar="تنفيذ ميزات واضحة ومنظمة.">Implement clean and purposeful features.</p></div>
+   <div class="processcard reveal"><div class="processno">04 /</div><h3 data-xen="Verify" data-xar="الاختبار">Verify</h3><p data-xen="Test flows, errors and edge cases." data-xar="اختبار الوظائف والأخطاء والحالات الخاصة.">Test flows, errors and edge cases.</p></div>
+   <div class="processcard reveal"><div class="processno">05 /</div><h3 data-xen="Evolve" data-xar="التحسين">Evolve</h3><p data-xen="Iterate based on feedback and evidence." data-xar="التطوير المستمر بناء على النتائج والملاحظات.">Iterate based on feedback and evidence.</p></div>
+  </div>
  </div>
 </section>
 <section id="about">
@@ -164,6 +237,69 @@ footer{border-top:1px solid var(--line);padding:27px 0 40px;color:var(--muted);f
   all('.reveal').forEach(el=>observer?observer.observe(el):el.classList.add('show'));
   let ticking=false;function progress(){const max=document.documentElement.scrollHeight-window.innerHeight;$('#progress').style.width=(max>0?Math.min(100,window.scrollY/max*100):0)+'%';ticking=false}window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(progress);ticking=true}},{passive:true});
   $('#year').textContent=String(new Date().getFullYear());language(saved('portfolio-language','en')==='ar'?'ar':'en');theme(saved('portfolio-theme','dark')==='light');progress();
+})();
+</script>
+<a href="mailto:afurolul@gmail.com" class="floating-contact" aria-label="Contact by email" title="Email Hussein">✉</a>
+<dialog id="caseDialog" aria-labelledby="caseTitle"><div class="dialogbox"><div class="dialogtop"><h2 id="caseTitle"></h2><button class="dialogclose" id="closeCase" aria-label="Close project details">✕</button></div><p id="caseDescription"></p><div class="dialogtech" id="caseTech"></div><p id="caseNote"></p><a class="button ghost" href="#contact" id="caseContact" data-xen="Get in touch ↗" data-xar="تواصل وياي ↗">Get in touch ↗</a></div></dialog>
+<dialog id="commandDialog" aria-labelledby="cmdTitle"><div class="dialogbox"><div class="dialogtop"><h2 id="cmdTitle" data-xen="Go somewhere" data-xar="الانتقال السريع">Go somewhere</h2><button class="dialogclose" id="closeCmd" aria-label="Close navigation">✕</button></div><input type="search" id="cmdSearch" class="searchinput" placeholder="Search pages and links..." aria-label="Search quick links" autocomplete="off"><div id="commandList" class="command-list"></div></div></dialog>
+
+<script>
+(()=>{
+ 'use strict';
+ const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)];
+ const lang=()=>document.documentElement.lang==='ar'?'ar':'en';
+ function translate(){all('[data-xen]').forEach(el=>{el.textContent=el.dataset[lang()==='ar'?'xar':'xen']||el.textContent});$('#cmdSearch').placeholder=lang()==='ar'?'ابحث عن قسم أو رابط...':'Search pages and links...'}
+ $('#langbtn').addEventListener('click',()=>{translate();refreshCommands();});
+ translate();
+ if(window.matchMedia('(pointer:fine)').matches){let ticking=false;window.addEventListener('pointermove',e=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{document.documentElement.style.setProperty('--cursor-x',e.clientX+'px');document.documentElement.style.setProperty('--cursor-y',e.clientY+'px');ticking=false})},{passive:true})}
+ // Contextual project filters
+ const filterButtons=all('[data-filter]'),projects=all('.project[data-category]');
+ filterButtons.forEach(btn=>btn.addEventListener('click',()=>{
+   filterButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+   projects.forEach(card=>{card.hidden=btn.dataset.filter!=='all'&&card.dataset.category!==btn.dataset.filter});
+ }));
+ // Case-study notes are grounded in repository information; no invented impact metrics
+ const cases={
+  edu:{title:'EDUVERSE Iraq',en:'A university-focused software platform with modules for academic content, community features and administrative workflows. Engineering areas include service integration, access control and cloud delivery.',ar:'منصة رقمية جامعية تضم محتوى أكاديمي ومزايا مجتمعية وإدارية. تشمل الجوانب الهندسية تكامل الخدمات وصلاحيات الوصول والنشر السحابي.',tech:['Next.js','TypeScript','Supabase','Cloudflare Workers'],noteEn:'Source is private. This is a technical overview, not a public product claim.',noteAr:'الكود خاص. هذا وصف تقني عام وليس ادعاء بأن المنتج مطروح للعامة.'},
+  haqo:{title:'HAQO Flutter',en:'A Flutter-based social application codebase involving feeds, profiles, video, chat and Firebase integrations. Emphasis on interface state, backend communication and mobile debugging.',ar:'قاعدة كود لتطبيق اجتماعي بفلاتر تشمل المنشورات والملفات الشخصية والفيديو والمحادثات وتكامل Firebase، مع اهتمام بإدارة الحالة وربط الخدمات وتصحيح الأخطاء.',tech:['Flutter','Dart','Firebase','REST APIs'],noteEn:'Private codebase. Features described reflect explored implementation areas.',noteAr:'المستودع خاص. الميزات المذكورة تمثل مجالات العمل بالمشروع.'},
+  cv:{title:'Seeraty Pro',en:'A web application project for CV and professional identity management using React, Vite and Supabase, with an emphasis on clear forms and structured presentation.',ar:'مشروع ويب لإنشاء السيرة الذاتية وإدارة الملف المهني باستخدام React وVite وSupabase، مع تركيز على نماذج الإدخال والعرض المنظم.',tech:['React','Vite','Supabase','JavaScript'],noteEn:'Private repository; no private source code is shared.',noteAr:'مستودع خاص ولا تتم مشاركة الشفرة البرمجية.'},
+  social:{title:'SocialVerse',en:'A public Arabic-language social UI exploration. Inspect the repository to see the HTML, CSS and JavaScript implementation.',ar:'تجربة عامة لواجهة منصة اجتماعية عربية. يمكن الاطلاع على التنفيذ بلغة HTML وCSS وJavaScript من المستودع.',tech:['HTML','CSS','JavaScript'],noteEn:'Public repository: github.com/Alrees2/chat',noteAr:'المستودع متاح للعامة: github.com/Alrees2/chat'}
+ };
+ const cd=$('#caseDialog');
+ projects.forEach(card=>{let b=document.createElement('button');b.type='button';b.className='case-button';b.dataset.xen='View engineering case study ↗';b.dataset.xar='التفاصيل الهندسية ↗';b.textContent=lang()==='ar'?b.dataset.xar:b.dataset.xen;b.addEventListener('click',()=>{
+  const c=cases[card.dataset.case];$('#caseTitle').textContent=c.title;$('#caseDescription').textContent=lang()==='ar'?c.ar:c.en;
+  $('#caseTech').replaceChildren(...c.tech.map(t=>{const el=document.createElement('span');el.className='pill';el.textContent=t;return el}));
+  $('#caseNote').textContent=lang()==='ar'?c.noteAr:c.noteEn;cd.showModal();
+ });card.appendChild(b)});
+ $('#langbtn').addEventListener('click',()=>{if(cd.open){const key=projects.find(p=>p.querySelector('.case-button:focus'))?.dataset.case; if(key){const c=cases[key];$('#caseDescription').textContent=lang()==='ar'?c.ar:c.en;$('#caseNote').textContent=lang()==='ar'?c.noteAr:c.noteEn}}});
+ $('#closeCase').addEventListener('click',()=>cd.close());
+ $('#caseContact').addEventListener('click',()=>cd.close());
+ cd.addEventListener('click',e=>{if(e.target===cd)cd.close()});
+ // Command palette supports keyboard navigation and in-page anchors
+ const cmd=$('#commandDialog'),search=$('#cmdSearch');
+ const shortcuts=[['#home','Home','الرئيسية'],['#expertise','Expertise','المهارات'],['#work','Selected work','المشاريع'],['#process','Engineering process','منهجية العمل'],['#about','About me','نبذة عني'],['#contact','Contact','التواصل'],['https://github.com/Alrees2','GitHub profile','حساب GitHub'],['mailto:afurolul@gmail.com','Email','البريد الإلكتروني']];
+ function refreshCommands(){const q=search.value.trim().toLowerCase(),container=$('#commandList');container.replaceChildren();let results=shortcuts.filter(([,en,ar])=>!q||en.toLowerCase().includes(q)||ar.includes(q));
+ results.forEach(([href,en,ar])=>{const a=document.createElement('a');a.href=href;a.className='command-item';a.textContent=lang()==='ar'?ar:en;const badge=document.createElement('span');badge.textContent=href.startsWith('#')?'↗':'↗ external';a.appendChild(badge);if(href.startsWith('https:')){a.target='_blank';a.rel='noopener noreferrer'}a.addEventListener('click',()=>cmd.close());container.appendChild(a)});
+ if(!results.length){const p=document.createElement('p');p.textContent=lang()==='ar'?'ماكو نتائج':'No matching destinations';container.appendChild(p)}
+ }
+ function showCommands(){search.value='';refreshCommands();cmd.showModal();search.focus()}
+ $('#cmdButton').addEventListener('click',showCommands);$('#closeCmd').addEventListener('click',()=>cmd.close());search.addEventListener('input',refreshCommands);cmd.addEventListener('click',e=>{if(e.target===cmd)cmd.close()});
+ window.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();cmd.open?cmd.close():showCommands()}});
+ // Public repositories only. API failure leaves a useful explicit external link.
+ const feed=$('#repoFeed');
+ function fallback(){const p=document.createElement('p');p.id='liveNote';p.textContent=lang()==='ar'?'تعذّر تحميل بيانات GitHub حالياً. تقدر تستعرض مستودعاتي من الرابط أعلاه.':'Live public GitHub data is temporarily unavailable. Browse the repositories via the link above.';feed.replaceChildren(p)}
+ fetch('https://api.github.com/users/Alrees2/repos?sort=updated&direction=desc&per_page=80',{headers:{Accept:'application/vnd.github+json'}}).then(r=>{if(!r.ok)throw new Error('GitHub API status '+r.status);return r.json()}).then(data=>{
+  if(!Array.isArray(data))throw new Error('Unexpected GitHub response');
+  const repos=data.filter(r=>r&&r.private===false&&!r.fork&&!r.archived&&typeof r.html_url==='string'&&r.html_url.startsWith('https://github.com/Alrees2/')).slice(0,4);
+  if(!repos.length){fallback();return}
+  feed.replaceChildren(...repos.map(repo=>{
+   const a=document.createElement('a');a.className='repo-card';a.href=repo.html_url;a.target='_blank';a.rel='noopener noreferrer';
+   const name=document.createElement('span');name.className='repo-title';name.textContent='↗ '+String(repo.name||'Repository');
+   const desc=document.createElement('span');desc.className='repo-desc';desc.textContent=repo.description|| (lang()==='ar'?'مستودع عام على GitHub':'Public code repository');
+   const meta=document.createElement('span');meta.className='repo-meta';meta.textContent=(repo.language||'Code')+' · ★ '+Number(repo.stargazers_count||0);
+   a.append(name,desc,meta);return a
+  }))
+ }).catch(fallback);
 })();
 </script>
 </body>
