@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/engineering-banner.svg" alt="Hussein Ali Mustafa — Software Engineering" width="100%" />
+<img src="https://raw.githubusercontent.com/Alrees2/My-definition-/main/assets/engineering-banner.svg" alt="Hussein Ali Mustafa — Software Engineering" width="100%" />
 
 ### Engineering ideas into reliable digital experiences.
 
